@@ -41,7 +41,13 @@ function Quiz() {
                     </li>
                 ))}
             </ul>
-            <button onClick={handleNextQ}>Next</button>
+            <button
+                onClick={handleNextQ}
+                disabled={currentAnswer === null}
+                className={currentAnswer === null ? "disable" : "enable"}
+            >
+                Next
+            </button>
         </div>
     );
 }
