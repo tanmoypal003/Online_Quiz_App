@@ -19,6 +19,13 @@ function Quiz() {
         }
     };
 
+    const handleNextQ = () => {
+        setCurrentQIndex(++currentQIndex);
+        setCurrentAnswer(null);
+        setQuestion(info[currentQIndex].question);
+        setChoices(info[currentQIndex].choices);
+    };
+
     return (
         <div className="container">
             <h1>Question</h1>
@@ -34,7 +41,7 @@ function Quiz() {
                     </li>
                 ))}
             </ul>
-            <button>Next</button>
+            <button onClick={handleNextQ}>Next</button>
         </div>
     );
 }
