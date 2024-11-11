@@ -1,13 +1,21 @@
+import { useState } from "react";
+import { info } from "../assets/Data";
+
 function Quiz() {
+    let [currentQIndex, setCurrentQIndex] = useState(0);
+
+    let [question, setQuestion] = useState(info[currentQIndex].question);
+
+    let [choices, setChoices] = useState(info[currentQIndex].choices);
+
     return (
         <div className="container">
             <h1>Question</h1>
-            <h2>In OOP, what is inheritance used for?</h2>
+            <h2>{question}</h2>
             <ul>
-                <li>Bundling data and methods </li>
-                <li>Achieving code reusability</li>
-                <li>Encapsulating properties</li>
-                <li>Simplifying complex systems</li>
+                {choices.map((choice, index) => (
+                    <li key={index}>{choice}</li>
+                ))}
             </ul>
             <button>Next</button>
         </div>
