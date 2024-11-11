@@ -1,4 +1,4 @@
-.question {
+.container {
     width: 650px;
     margin: auto;
     height: auto;
@@ -9,6 +9,17 @@
     color: black;
     gap: 17px;
     background-color: #e1e2e2;
+}
+
+.container h1 {
+    margin: 0 20.5rem 0 auto;
+    font-family: "Oxanium", sans-serif;
+    font-size: 33px;
+}
+
+.container h2 {
+    font-size: 19px;
+    font-weight: 500;
 }
 
 .selection {
