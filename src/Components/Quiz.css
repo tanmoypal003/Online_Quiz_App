@@ -22,6 +22,17 @@
     font-weight: 500;
 }
 
+.question li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    border: 2px solid #acacac;
+    padding: 15px 0 15px 25px;
+    border-radius: 35px;
+}
+
 .selection {
     background-color: #fb8122;
 }
