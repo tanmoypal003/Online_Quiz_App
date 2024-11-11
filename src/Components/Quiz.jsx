@@ -10,8 +10,13 @@ function Quiz() {
 
     let [currentAnswer, setCurrentAnswer] = useState(null);
 
+    let [score, setScore] = useState(0);
+
     const handleClick = (choice, index) => {
         setCurrentAnswer(choice);
+        if (info[currentQIndex].answer == index) {
+            setScore(++score);
+        }
     };
 
     return (
@@ -23,6 +28,7 @@ function Quiz() {
                     <li
                         key={index}
                         onClick={() => handleClick(choice, index + 1)}
+                        className={currentAnswer === choice ? "selection" : ""}
                     >
                         {choice}
                     </li>
