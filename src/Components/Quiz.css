@@ -1,4 +1,4 @@
-.container {
+.q_container {
     width: 650px;
     margin: auto;
     height: auto;
@@ -11,18 +11,18 @@
     background-color: #e1e2e2;
 }
 
-.container h1 {
+.q_container h1 {
     margin: 0 20.5rem 0 auto;
     font-family: "Oxanium", sans-serif;
     font-size: 33px;
 }
 
-.container h2 {
+.q_container h2 {
     font-size: 19px;
     font-weight: 500;
 }
 
-.container li {
+.q_container li {
     list-style: none;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
     background-color: #fb8122;
 }
 
-.container button {
+.q_container button {
     width: 120px;
     margin: auto;
     border-radius: 10px;

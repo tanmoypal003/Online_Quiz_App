@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { info } from "../assets/Data";
+import "./Quiz.css";
 
 function Quiz() {
     let [currentQIndex, setCurrentQIndex] = useState(0);
@@ -43,7 +44,7 @@ function Quiz() {
     };
 
     return (
-        <div className="container">
+        <div className="q_container">
             <h1>Question</h1>
             {result ? (
                 <></>

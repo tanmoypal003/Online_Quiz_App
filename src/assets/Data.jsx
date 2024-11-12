@@ -77,17 +77,22 @@ export const info = [
     {
         question: "In OOP, what does the term 'abstraction' refer to?",
         choices: [
+            "Hiding the internal details of an object",
+            "Bundling data and methods into a class",
+            "Creating multiple instances of a class",
+            "Establishing a relationship between classes",
+        ],
+        answer: 1,
+    },
+    {
+        question: "Who was the first president of the United States?",
+        choices: [
             "Thomas Jefferson",
             "George Washington",
             "Abraham Lincoln",
             "John Adams",
         ],
         answer: 2,
-    },
-    {
-        question: "Who was the first president of the United States?",
-        choices: ["Osmium", "Ozone", "Omnium", "Oxygen"],
-        answer: 4,
     },
     {
         question: "What is the purpose of a constructor in OOP?",
@@ -97,7 +102,7 @@ export const info = [
             "To initialize the properties of an object",
             "To establish a relationship between classes",
         ],
-        answer: 1,
+        answer: 3,
     },
     {
         question: "What is a class in OOP?",
