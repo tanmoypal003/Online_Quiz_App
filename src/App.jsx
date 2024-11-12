@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { info } from "./assets/Data";
+import Quiz from "./Components/Quiz";
 
 function App() {
     let [status, setStatus] = useState(false);
@@ -25,7 +26,9 @@ function App() {
 
             {status ? (
                 <>
-                    <div></div>
+                    <div>
+                        <Quiz />
+                    </div>
                 </>
             ) : (
                 <></>

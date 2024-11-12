@@ -1,0 +1,11 @@
+.container {
+    width: 700px;
+    background-color: #17202a;
+    border-radius: 5px;
+}
+
+.quiz_wrapper {
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+}
