@@ -9,3 +9,30 @@
     color: #fff;
     text-align: center;
 }
+
+.quiz_wrapper h3 {
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+.quiz_wrapper h2 {
+    font-size: 2rem;
+    font-family: "Oxanium", sans-serif;
+}
+
+.start_btn {
+    outline: none;
+    border: none;
+    background-color: #229954;
+    color: #fff;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    width: fit-content;
+    font-family: "Oxanium", sans-serif;
+}
+
+.quiz_wrapper p {
+    margin: 1rem 0;
+}
