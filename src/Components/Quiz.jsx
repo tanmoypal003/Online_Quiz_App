@@ -12,6 +12,8 @@ function Quiz() {
 
     let [score, setScore] = useState(0);
 
+    let [result, setResult] = useState(false);
+
     const handleClick = (choice, index) => {
         setCurrentAnswer(choice);
         if (info[currentQIndex].answer == index) {
@@ -20,34 +22,69 @@ function Quiz() {
     };
 
     const handleNextQ = () => {
-        setCurrentQIndex(++currentQIndex);
+        if (currentQIndex === info.length - 1) {
+            setResult(true);
+            return 0;
+        } else {
+            setCurrentQIndex(++currentQIndex);
+            setCurrentAnswer(null);
+            setQuestion(info[currentQIndex].question);
+            setChoices(info[currentQIndex].choices);
+        }
+    };
+
+    const resetAll = () => {
+        setCurrentQIndex(0);
+        setQuestion(info[0].question);
+        setChoices(info[0].choices);
+        setScore(0);
+        setResult(false);
         setCurrentAnswer(null);
-        setQuestion(info[currentQIndex].question);
-        setChoices(info[currentQIndex].choices);
     };
 
     return (
         <div className="container">
             <h1>Question</h1>
-            <h2>{question}</h2>
-            <ul>
-                {choices.map((choice, index) => (
-                    <li
-                        key={index}
-                        onClick={() => handleClick(choice, index + 1)}
-                        className={currentAnswer === choice ? "selection" : ""}
+            {result ? (
+                <></>
+            ) : (
+                <>
+                    <h2>{question}</h2>
+                    <ul>
+                        {choices.map((choice, index) => (
+                            <li
+                                key={index}
+                                onClick={() => handleClick(choice, index + 1)}
+                                className={
+                                    currentAnswer === choice ? "selection" : ""
+                                }
+                            >
+                                {choice}
+                            </li>
+                        ))}
+                    </ul>
+                    <button
+                        onClick={handleNextQ}
+                        disabled={currentAnswer === null}
+                        className={
+                            currentAnswer === null ? "disable" : "enable"
+                        }
                     >
-                        {choice}
-                    </li>
-                ))}
-            </ul>
-            <button
-                onClick={handleNextQ}
-                disabled={currentAnswer === null}
-                className={currentAnswer === null ? "disable" : "enable"}
-            >
-                Next
-            </button>
+                        Next
+                    </button>
+                </>
+            )}
+
+            {result ? (
+                <>
+                    <h2>
+                        You Scored {score} out of {info.length}
+                    </h2>
+                    <button onClick={resetAll}>Reset</button>
+                </>
+            ) : (
+                <></>
+            )}
         </div>
     );
 }

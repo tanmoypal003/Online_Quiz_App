@@ -22,7 +22,7 @@
     font-weight: 500;
 }
 
-.question li {
+.container li {
     list-style: none;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
     background-color: #fb8122;
 }
 
-.question button {
+.container button {
     width: 120px;
     margin: auto;
     border-radius: 10px;
