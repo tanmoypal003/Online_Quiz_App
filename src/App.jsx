@@ -16,11 +16,14 @@ function App() {
                 <></>
             ) : (
                 <>
-                    <div className="quiz_wrapper"></div>
-                    <h3>Welcome to the </h3>
-                    <h2>QUICK QUIZ</h2>
-                    <p>Number of questions : {info.length}</p>
-                    <button onClick={loadQuestion}>Let&apos;s Start</button>
+                    <div className="quiz_wrapper">
+                        <h3>Welcome to the </h3>
+                        <h2>QUICK QUIZ</h2>
+                        <p>Number of questions : {info.length}</p>
+                        <button onClick={loadQuestion} className="start_btn">
+                            Let&apos;s Start
+                        </button>
+                    </div>
                 </>
             )}
 
