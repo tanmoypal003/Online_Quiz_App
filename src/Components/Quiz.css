@@ -6,9 +6,9 @@
     flex-direction: column;
     border-radius: 15px;
     padding: 50px 0 50px 50px;
-    color: black;
+    color: #12181e;
     gap: 17px;
-    background-color: #e1e2e2;
+    background-color: #ffffff;
 }
 
 .q_container h1 {
@@ -28,13 +28,15 @@
     align-items: center;
     width: 80%;
     margin: 20px 0;
-    border: 2px solid #acacac;
+    border: 2px solid #85fe78;
     padding: 15px 0 15px 25px;
     border-radius: 35px;
 }
 
 .selection {
-    background-color: #fb8122;
+    background-color: #27ac1f;
+    color: #ffffff;
+    border-color: #27ac1f;
 }
 
 .q_container button {
@@ -48,10 +50,11 @@
 
 .disable {
     cursor: not-allowed;
+    background-color: #ffffff;
 }
 
 .enable {
-    background-color: #1d2228;
-    color: #e1e2e2;
+    background-color: #27ac1f;
+    color: #12181e;
     cursor: pointer;
 }
